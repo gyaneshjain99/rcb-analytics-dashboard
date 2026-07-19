@@ -1,0 +1,250 @@
+{
+  "overall": {
+    "wins": 145,
+    "losses": 138,
+    "mom": {
+      "KM Jadhav": 1,
+      "CH Gayle": 16,
+      "HV Patel": 3,
+      "UT Yadav": 2,
+      "AB de Villiers": 22,
+      "V Kohli": 19,
+      "PA Patel": 2,
+      "YS Chahal": 4,
+      "GJ Maxwell": 4,
+      "D Padikkal": 1,
+      "KS Bharat": 1,
+      "PWH de Silva": 2,
+      "KD Karthik": 2,
+      "Anuj Rawat": 1,
+      "Mohammed Siraj": 2,
+      "WD Parnell": 1,
+      "RM Patidar": 4,
+      "WG Jacks": 1,
+      "C Green": 1,
+      "F du Plessis": 1,
+      "KH Pandya": 3,
+      "PD Salt": 2,
+      "JR Hazlewood": 2,
+      "R Shepherd": 1,
+      "JM Sharma": 1,
+      "Suyash Sharma": 1,
+      "JA Duffy": 1,
+      "TH David": 1,
+      "R Vinay Kumar": 3,
+      "SP Goswami": 1,
+      "A Kumble": 3,
+      "P Kumar": 1,
+      "R Dravid": 1,
+      "MV Boucher": 1,
+      "LRPL Taylor": 2,
+      "MK Pandey": 2,
+      "JH Kallis": 2,
+      "KP Pietersen": 2,
+      "S Aravind": 1,
+      "JD Unadkat": 1,
+      "Yuvraj Singh": 1,
+      "MA Starc": 1,
+      "Mandeep Singh": 1,
+      "SR Watson": 1
+    }
+  },
+  "seasons": {
+    "2017": {
+      "wins": 3,
+      "losses": 10,
+      "mom": {
+        "KM Jadhav": 1,
+        "CH Gayle": 1,
+        "HV Patel": 1
+      }
+    },
+    "2018": {
+      "wins": 6,
+      "losses": 8,
+      "mom": {
+        "UT Yadav": 2,
+        "AB de Villiers": 3
+      }
+    },
+    "2019": {
+      "wins": 5,
+      "losses": 8,
+      "mom": {
+        "AB de Villiers": 2,
+        "V Kohli": 1,
+        "PA Patel": 1
+      }
+    },
+    "2020/21": {
+      "wins": 7,
+      "losses": 8,
+      "mom": {
+        "YS Chahal": 2,
+        "AB de Villiers": 3,
+        "V Kohli": 1
+      }
+    },
+    "2021": {
+      "wins": 9,
+      "losses": 6,
+      "mom": {
+        "HV Patel": 1,
+        "GJ Maxwell": 3,
+        "D Padikkal": 1,
+        "AB de Villiers": 1,
+        "KS Bharat": 1,
+        "YS Chahal": 1
+      }
+    },
+    "2022": {
+      "wins": 9,
+      "losses": 7,
+      "mom": {
+        "PWH de Silva": 2,
+        "KD Karthik": 2,
+        "Anuj Rawat": 1,
+        "HV Patel": 1,
+        "V Kohli": 1
+      }
+    },
+    "2023": {
+      "wins": 7,
+      "losses": 7,
+      "mom": {
+        "V Kohli": 2,
+        "Mohammed Siraj": 1,
+        "GJ Maxwell": 1,
+        "WD Parnell": 1
+      }
+    },
+    "2024": {
+      "wins": 7,
+      "losses": 8,
+      "mom": {
+        "V Kohli": 2,
+        "RM Patidar": 1,
+        "WG Jacks": 1,
+        "Mohammed Siraj": 1,
+        "C Green": 1,
+        "F du Plessis": 1
+      }
+    },
+    "2025": {
+      "wins": 11,
+      "losses": 4,
+      "mom": {
+        "KH Pandya": 3,
+        "RM Patidar": 2,
+        "PD Salt": 1,
+        "V Kohli": 1,
+        "JR Hazlewood": 1,
+        "R Shepherd": 1,
+        "JM Sharma": 1,
+        "Suyash Sharma": 1
+      }
+    },
+    "2026": {
+      "wins": 11,
+      "losses": 5,
+      "mom": {
+        "JA Duffy": 1,
+        "TH David": 1,
+        "PD Salt": 1,
+        "JR Hazlewood": 1,
+        "V Kohli": 3,
+        "RM Patidar": 1
+      }
+    },
+    "2007/08": {
+      "wins": 4,
+      "losses": 10,
+      "mom": {
+        "R Vinay Kumar": 1,
+        "SP Goswami": 1,
+        "A Kumble": 1,
+        "P Kumar": 1
+      }
+    },
+    "2009": {
+      "wins": 9,
+      "losses": 7,
+      "mom": {
+        "R Dravid": 1,
+        "MV Boucher": 1,
+        "LRPL Taylor": 2,
+        "MK Pandey": 2,
+        "A Kumble": 1
+      }
+    },
+    "2009/10": {
+      "wins": 8,
+      "losses": 8,
+      "mom": {
+        "JH Kallis": 2,
+        "KP Pietersen": 2,
+        "R Vinay Kumar": 1,
+        "A Kumble": 1
+      }
+    },
+    "2011": {
+      "wins": 10,
+      "losses": 6,
+      "mom": {
+        "AB de Villiers": 1,
+        "CH Gayle": 6,
+        "V Kohli": 2,
+        "S Aravind": 1
+      }
+    },
+    "2012": {
+      "wins": 8,
+      "losses": 7,
+      "mom": {
+        "AB de Villiers": 3,
+        "CH Gayle": 5
+      }
+    },
+    "2013": {
+      "wins": 9,
+      "losses": 7,
+      "mom": {
+        "CH Gayle": 2,
+        "V Kohli": 2,
+        "R Vinay Kumar": 1,
+        "AB de Villiers": 1,
+        "JD Unadkat": 1
+      }
+    },
+    "2014": {
+      "wins": 5,
+      "losses": 9,
+      "mom": {
+        "YS Chahal": 1,
+        "PA Patel": 1,
+        "AB de Villiers": 2,
+        "Yuvraj Singh": 1
+      }
+    },
+    "2015": {
+      "wins": 8,
+      "losses": 6,
+      "mom": {
+        "CH Gayle": 2,
+        "MA Starc": 1,
+        "Mandeep Singh": 1,
+        "AB de Villiers": 2,
+        "V Kohli": 1
+      }
+    },
+    "2016": {
+      "wins": 9,
+      "losses": 7,
+      "mom": {
+        "AB de Villiers": 4,
+        "V Kohli": 3,
+        "SR Watson": 1
+      }
+    }
+  }
+}
