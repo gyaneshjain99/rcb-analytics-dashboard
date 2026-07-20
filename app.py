@@ -9,6 +9,18 @@ from utils.ui import add_rcb_theme, show_banner
 st.set_page_config(page_title="RCB Analytics Dashboard", layout="wide")
 add_rcb_theme()
 
+# --- CSS OVERRIDE FOR DROPDOWNS READABILITY ---
+st.markdown(
+    """
+    <style>
+    div[data-baseweb="popover"] div, div[data-baseweb="menu"] div, .stSelectbox div[data-baseweb="select"] {
+        color: #111111 !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # --- 3. SESSION STATE PERSISTENCE ---
 if 'selected_player' not in st.session_state:
     st.session_state.selected_player = None
@@ -74,7 +86,7 @@ if page == "All Time Stats":
             
             if not player_trends.empty:
                 fig = px.line(player_trends, x="season", y=metric, title=f"{selected_player} - {metric.capitalize()} per Season", markers=True, template="plotly_dark")
-                fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
+                fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font=dict(color='white'))
                 st.plotly_chart(fig, use_container_width=True)
         
         st.divider()
@@ -97,7 +109,8 @@ if page == "All Time Stats":
             def highlight_max(row):
                 if row.name in ['Econ', 'Bowl Avg']: is_better = row == row.min()
                 else: is_better = row == row.max()
-                return ['background-color: #004d00' if v else '' for v in is_better]
+                # Soft transparent green preventing text washout
+                return ['background-color: rgba(46, 139, 87, 0.3); color: #ffffff;' if v else '' for v in is_better]
             
             st.dataframe(df_comp.style.apply(highlight_max, axis=1).format(precision=2), use_container_width=True)
             
@@ -109,14 +122,14 @@ elif page == "Team Analysis":
         with col1:
             st.subheader("Overall Record")
             fig = px.pie(values=[t_data["overall"]["wins"], t_data["overall"]["losses"]], names=['Wins', 'Losses'])
-            fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", font_color="white")
+            fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font=dict(color='white'))
             st.plotly_chart(fig)
         with col2:
             season = st.selectbox("Select Season", sorted(t_data["seasons"].keys(), reverse=True))
             st.subheader(f"Record for {season}")
             s_data = t_data["seasons"][season]
             fig_s = px.pie(values=[s_data["wins"], s_data["losses"]], names=['Wins', 'Losses'])
-            fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", font_color="white")
+            fig_s.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font=dict(color='white'))
             st.plotly_chart(fig_s)
         st.subheader("Man of the Match Leaders (All Time)")
         mom_all = pd.DataFrame(list(t_data["overall"]["mom"].items()), columns=['Player', 'Awards'])
