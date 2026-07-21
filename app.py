@@ -9,12 +9,28 @@ from utils.ui import add_rcb_theme, show_banner
 st.set_page_config(page_title="RCB Analytics Dashboard", layout="wide")
 add_rcb_theme()
 
-# --- CSS OVERRIDE FOR DROPDOWNS READABILITY ---
+# --- CSS OVERRIDE FOR DROPDOWNS READABILITY & SCROLLABLE MAX HEIGHT ---
 st.markdown(
     """
     <style>
-    div[data-baseweb="popover"] div, div[data-baseweb="menu"] div, .stSelectbox div[data-baseweb="select"] {
-        color: #111111 !important;
+    /* Ensure placeholder text in the main box is white */
+    div[data-baseweb="select"] span {
+        color: #ffffff !important;
+    }
+    
+    /* Force all text/team names inside the popup menu to be brilliant white */
+    div[data-baseweb="popover"] *, 
+    ul[data-baseweb="menu"] *, 
+    div[data-baseweb="menu"] * {
+        color: #ffffff !important;
+    }
+    
+    /* Set popup container background to match your dark theme cleanly */
+    div[data-baseweb="popover"], ul[data-baseweb="menu"] {
+        background-color: #0e1117 !important;
+        max-height: 250px !important;
+        overflow-y: auto !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
     }
     </style>
     """,
@@ -29,10 +45,11 @@ st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["All Time Stats", "Team Analysis"], key="nav_radio")
 show_banner()
 
-# --- 1. INPUT BATCHING (ST.FORM) ---
+# --- 1. INPUT BATCHING (ST.FORM & OUT-OF-FORM MULTISELECT) ---
+st.sidebar.subheader("Filters")
+opponent_filter = st.sidebar.multiselect("Filter by Opponent:", get_all_opponents())
+
 with st.sidebar.form(key='filter_form'):
-    st.subheader("Filters")
-    opponent_filter = st.multiselect("Filter by Opponent:", get_all_opponents())
     phase_filter = st.selectbox("Filter by Phase:", ["Overall", "Powerplay", "Middle", "Death"])
     submit_button = st.form_submit_button(label='Apply Filters')
 
